@@ -58,3 +58,10 @@ gem "react-rails", "~> 2.6"
 gem "activeadmin", "~> 2.7"
 
 gem "devise", "~> 4.7"
+
+gem "ruby-audioinfo", "~> 0.5.2"
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+gem "aws-sdk-s3", require: false
+
