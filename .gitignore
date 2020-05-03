@@ -29,5 +29,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-
+AWSSecretKey=Fs/CY0JSAQKapGHgV9PlyfS+UmcrYonwm87juhAi
 .env
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

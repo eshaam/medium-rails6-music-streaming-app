@@ -3,14 +3,12 @@ import PropTypes from "prop-types"
 
 class MusicPlayer extends React.Component {
 
-
   constructor(props) {
     super(props);
     this.state = {
       songs: props.songs,
       playing: false,
       index: 0
-
     };
 
     this.playPause = this.playPause.bind(this);
@@ -40,7 +38,7 @@ class MusicPlayer extends React.Component {
   playSong = (key) => {
     console.log(key);
     this.setState(prevState => {
-      return { index: key, playing: true};
+      return { index: key, playing: true };
     });
     this.audioPlayerRef.current.src = this.state.songs[this.state.index].src;
     this.audioPlayerRef.current.play();
@@ -78,18 +76,18 @@ class MusicPlayer extends React.Component {
 
           <div id="header" class="row fixed-top">
             <div className={'col-sm-12 text-center'}>
-     {
-        (this.state.playing === false)
-          ? <p>Click Play to start listening to some music</p>
-          :  <p>Use Next or Previous or Scroll the Songs below</p>
-      }
+              {
+                (this.state.playing === false)
+                  ? <p>Click Play to start listening to some music</p>
+                  : <p>Use Next or Previous or Scroll the Songs below</p>
+              }
               <h2>{this.state.songs[this.state.index].name}</h2>
               <h4>{this.state.songs[this.state.index].artist}</h4>
               <button className={'btn btn-pirmary btn-lg'} onClick={() => { this.playPause() }}>Play/Pause</button>
 
               <div id="tracks">
-              <a  id="btnPrev" onClick={() => { this.previousSong() }}>Previous</a>
-              <a id="btnNext" onClick={() => { this.nextSong() }}>Next</a>
+                <a id="btnPrev" onClick={() => { this.previousSong() }}>Previous</a>
+                <a id="btnNext" onClick={() => { this.nextSong() }}>Next</a>
               </div>
 
               <hr></hr>
@@ -102,7 +100,7 @@ class MusicPlayer extends React.Component {
             <ul id="plList">
 
 
-            {
+              {
 
                 this.state.songs
                   .map((item, key) => {
@@ -114,7 +112,7 @@ class MusicPlayer extends React.Component {
                       </div>
                     </li>
                   })
-                }
+              }
 
 
 
